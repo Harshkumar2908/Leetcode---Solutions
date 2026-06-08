@@ -4,17 +4,20 @@ class Solution {
         int index = 0;
         for(int num : nums){
             if(num < pivot){
-                result[index++] = num;
+                result[index] = num;
+                index++;
             }
         }
         for(int num : nums){
             if(num == pivot){
-                result[index++] = num;
+                result[index] = num;
+                index++;
             }
         }
         for(int num : nums){
             if(num > pivot){
-                result[index++] = num;
+                result[index] = num;
+                index++;
             }
         }
     return result;
