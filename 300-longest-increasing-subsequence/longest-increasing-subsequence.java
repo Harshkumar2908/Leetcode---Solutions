@@ -8,7 +8,7 @@ class Solution {
 
         Arrays.fill(dp, 1);
 
-        int ans = 1;
+        int maxLength = 1;
 
         for(int i = 1; i < n; i++) {
 
@@ -19,9 +19,9 @@ class Solution {
                 }
             }
 
-            ans = Math.max(ans, dp[i]);
+            maxLength = Math.max(maxLength, dp[i]);
         }
 
-        return ans;
+        return maxLength;
     }
 }
